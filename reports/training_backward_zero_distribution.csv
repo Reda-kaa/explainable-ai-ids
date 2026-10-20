@@ -1,0 +1,14 @@
+File,Class,Total,ValidValues,ZeroCount,ZeroPercent,Median,MissingPercent
+Benign-Monday-no-metadata.parquet,Benign,458831,458831,40414,8.80803607428443,2.0,0.0
+Botnet-Friday-no-metadata.parquet,Attack,1437,1437,0,0.0,3.0,0.0
+Botnet-Friday-no-metadata.parquet,Benign,174601,174601,15321,8.774863832395004,2.0,0.0
+Bruteforce-Tuesday-no-metadata.parquet,Attack,9150,9150,75,0.819672131147541,15.0,0.0
+Bruteforce-Tuesday-no-metadata.parquet,Benign,380564,380564,32488,8.536803270934717,2.0,0.0
+DoS-Wednesday-no-metadata.parquet,Attack,193756,193756,16587,8.560767150436632,6.0,0.0
+DoS-Wednesday-no-metadata.parquet,Benign,391235,391235,33880,8.659756923588125,2.0,0.0
+Infiltration-Thursday-no-metadata.parquet,Attack,36,36,3,8.333333333333332,26.0,0.0
+Infiltration-Thursday-no-metadata.parquet,Benign,207594,207594,18220,8.776746919467808,2.0,0.0
+Portscan-Friday-no-metadata.parquet,Attack,1956,1956,60,3.067484662576687,1.0,0.0
+Portscan-Friday-no-metadata.parquet,Benign,117566,117566,11356,9.6592552268513,2.0,0.0
+WebAttacks-Thursday-no-metadata.parquet,Attack,2143,2143,17,0.7932804479701353,1.0,0.0
+WebAttacks-Thursday-no-metadata.parquet,Benign,153677,153677,13895,9.04169133962792,2.0,0.0

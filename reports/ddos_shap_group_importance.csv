@@ -1,0 +1,25 @@
+CaseGroup,Feature,Absolute_SHAP
+FN_win_minus1,Packet Length Min,0.0338385290545034
+FN_win_minus1,Init Bwd Win Bytes,0.025845921688208668
+FN_win_minus1,Fwd Packet Length Min,0.023281088637398473
+FN_win_minus1,Bwd Packet Length Std,0.014621219995369757
+FN_win_minus1,Packet Length Variance,0.011952740026822539
+FN_win_minus1,Fwd IAT Total,0.01080379335766338
+FN_win_minus1,Packet Length Std,0.01069371478900924
+FN_win_minus1,Bwd Header Length,0.008821477816585457
+FN_win_minus1,Packet Length Max,0.00846525557012228
+FN_win_minus1,Active Mean,0.007936196589589599
+FN_win_minus1,Packet Length Mean,0.007880460923515025
+FN_win_minus1,Bwd Packet Length Mean,0.007738093570410456
+TP_win_positive,Bwd Packet Length Std,0.06407530610718065
+TP_win_positive,Init Bwd Win Bytes,0.048616003541731484
+TP_win_positive,Packet Length Min,0.04821278022515647
+TP_win_positive,Bwd Packet Length Mean,0.04101541990882387
+TP_win_positive,Fwd Packet Length Min,0.033626919643179466
+TP_win_positive,Packet Length Std,0.033528652220164955
+TP_win_positive,Avg Packet Size,0.0299765400148749
+TP_win_positive,Fwd Header Length,0.029816798204125236
+TP_win_positive,Packet Length Variance,0.029366046965105853
+TP_win_positive,Avg Bwd Segment Size,0.02426502202934671
+TP_win_positive,Subflow Bwd Bytes,0.017354186440518712
+TP_win_positive,Idle Std,0.01573003872667414

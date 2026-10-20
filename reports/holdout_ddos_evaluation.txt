@@ -1,0 +1,23 @@
+HELD-OUT FILE EVALUATION: DDoS-Friday
+Training data: all other Parquet files
+Test data: DDoS-Friday only
+
+Training rows: 50572
+Testing rows: 10000
+Features: 77
+Accuracy: 0.8122
+ROC-AUC: 0.8998
+
+Classification report:
+              precision    recall  f1-score   support
+
+      Benign       0.73      1.00      0.84      5000
+      Attack       1.00      0.63      0.77      5000
+
+    accuracy                           0.81     10000
+   macro avg       0.86      0.81      0.81     10000
+weighted avg       0.86      0.81      0.81     10000
+
+Confusion matrix (rows=actual, columns=predicted):
+[[4989   11]
+ [1867 3133]]

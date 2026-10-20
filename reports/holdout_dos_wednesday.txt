@@ -1,0 +1,8 @@
+Test file: DoS-Wednesday-no-metadata.parquet
+Threshold: 0.5
+Training rows: 50572
+Test rows: 10000
+Features: 77
+Accuracy: 0.5153
+ROC-AUC: 0.9719
+TN=4997, FP=3, FN=4844, TP=156

@@ -1,0 +1,23 @@
+File,Label,Count,Percentage
+Benign-Monday-no-metadata.parquet,Benign,458831,100.0
+Botnet-Friday-no-metadata.parquet,Benign,174601,99.1837
+Botnet-Friday-no-metadata.parquet,Bot,1437,0.8163
+Bruteforce-Tuesday-no-metadata.parquet,Benign,380564,97.6521
+Bruteforce-Tuesday-no-metadata.parquet,FTP-Patator,5931,1.5219
+Bruteforce-Tuesday-no-metadata.parquet,SSH-Patator,3219,0.826
+DDoS-Friday-no-metadata.parquet,DDoS,128014,57.8558
+DDoS-Friday-no-metadata.parquet,Benign,93250,42.1442
+DoS-Wednesday-no-metadata.parquet,Benign,391235,66.8788
+DoS-Wednesday-no-metadata.parquet,DoS Hulk,172846,29.5468
+DoS-Wednesday-no-metadata.parquet,DoS GoldenEye,10286,1.7583
+DoS-Wednesday-no-metadata.parquet,DoS slowloris,5385,0.9205
+DoS-Wednesday-no-metadata.parquet,DoS Slowhttptest,5228,0.8937
+DoS-Wednesday-no-metadata.parquet,Heartbleed,11,0.0019
+Infiltration-Thursday-no-metadata.parquet,Benign,207594,99.9827
+Infiltration-Thursday-no-metadata.parquet,Infiltration,36,0.0173
+Portscan-Friday-no-metadata.parquet,Benign,117566,98.3635
+Portscan-Friday-no-metadata.parquet,PortScan,1956,1.6365
+WebAttacks-Thursday-no-metadata.parquet,Benign,153677,98.6247
+WebAttacks-Thursday-no-metadata.parquet,Web Attack � Brute Force,1470,0.9434
+WebAttacks-Thursday-no-metadata.parquet,Web Attack � XSS,652,0.4184
+WebAttacks-Thursday-no-metadata.parquet,Web Attack � Sql Injection,21,0.0135

@@ -1,0 +1,23 @@
+﻿.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+.env
+.env.*
+!.env.example
+
+# Datasets bruts et transformés
+data/raw/
+data/processed/
+
+# Fichiers temporaires
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Archives de datasets volumineux
+data/*.zip
+
+# Résultats SHAP intermédiaires volumineux
+reports/shap_global/shap_all_sampled_cases.csv
