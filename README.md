@@ -85,6 +85,14 @@ The dashboard provides:
 SHAP explanations describe how features contribute to model output.
 They do not establish causality or guarantee that a detected flow is malicious.
 
+## Dashboard Preview
+
+![AI-IDS Detection Dashboard](assets/dashboard.png)
+
+## Explainable AI with SHAP
+
+![SHAP Local Explanation](assets/shap-explanation.png)
+
 ## Model and Data
 
 The dashboard expects the model bundle at:
