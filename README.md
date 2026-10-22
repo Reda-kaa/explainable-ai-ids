@@ -85,14 +85,6 @@ The dashboard provides:
 SHAP explanations describe how features contribute to model output.
 They do not establish causality or guarantee that a detected flow is malicious.
 
-## Dashboard Preview
-
-![AI-IDS Detection Dashboard](assets/dashboard.png)
-
-## Explainable AI with SHAP
-
-![SHAP Local Explanation](assets/shap-explanation.png)
-
 ## Model and Data
 
 The dashboard expects the model bundle at:
@@ -124,3 +116,19 @@ and remove sensitive information before publishing files or reports.
 
 No license has been specified yet. Add an appropriate license before
 allowing others to reuse or redistribute this project.
+
+
+---
+
+## Dashboard Preview
+
+The dashboard displays network traffic analysis, attack predictions, detection probabilities, and evaluation metrics.
+
+![AI-IDS Detection Dashboard](assets/dashboard.png)
+
+## Explainable AI with SHAP
+
+SHAP provides global feature importance and local explanations to help understand why the model classifies a network flow as an attack.
+
+![SHAP Explainability](assets/shap-explanation.png)
+
