@@ -135,10 +135,9 @@ SHAP provides global feature importance and local explanations to help understan
 
 ## Model Evaluation & Generalization
 
-The model was evaluated on a general evaluation set and on held-out
-network traffic files to assess its ability to generalize to unseen data.
+The project evaluates the Random Forest IDS using a general evaluation set and separate held-out traffic experiments. Results from different models and evaluation procedures are reported separately.
 
-### General Evaluation
+### General Evaluation - Original Model
 
 | Metric | Score |
 |---|---:|
@@ -148,20 +147,40 @@ network traffic files to assess its ability to generalize to unseen data.
 
 Evaluation set: 12,115 samples.
 
-### Held-Out Dataset Evaluation
+These results describe the original model's evaluation and should not be interpreted as its expected performance on every unseen dataset.
+
+### Held-Out Dataset Evaluation - Baseline Experiments
 
 | Test dataset | Accuracy | Attack Recall | Attack F1-score | ROC-AUC |
 |---|---:|---:|---:|---:|
 | DDoS-Friday | 81.22% | 62.66% | 77.00% | 89.98% |
 | DoS-Wednesday | 51.53% | 3.12% | Not reported | 97.19% |
 
-The held-out tests reveal a generalization gap, particularly for
-DoS-Wednesday. These results highlight the importance of evaluating
-intrusion detection models on unseen traffic and investigating
-decision thresholds, feature distributions, and missed attacks.
+These baseline experiments show that performance can vary substantially across traffic datasets. In particular, the original DoS-Wednesday experiment achieved very low attack recall at the default 0.50 decision threshold.
+
+### DoS-Wednesday - Threshold-Tuned Experiment
+
+A separate Random Forest model was trained using the non-holdout traffic files. Median imputation was fitted on the training data, and the decision threshold was selected on a validation split with a target false positive rate (FPR) of at most 5%.
+
+The selected threshold was **0.10**, with a validation recall of **99.84%** and a validation FPR of **4.36%**. The DoS-Wednesday file was excluded from training and threshold selection for this experiment.
+
+#### Final held-out test results
+
+| Threshold | Accuracy | Attack Precision | Attack Recall | Attack F1-score | FPR |
+|---:|---:|---:|---:|---:|---:|
+| 0.10 | 91.69% | 94.49% | 88.54% | 91.42% | 5.16% |
+| 0.50 | 51.61% | 97.63% | 3.30% | 6.38% | 0.08% |
+
+Test set: 10,000 samples, including 5,000 benign and 5,000 attack flows. ROC-AUC: **96.61%**.
+
+At threshold 0.10, the model detected 4,427 of 5,000 attack flows, with 258 false positives. At threshold 0.50, it detected 165 attack flows, with 4 false positives.
+
+The threshold-tuned results demonstrate the trade-off between attack detection and false alarms. The 5% FPR target was met on validation, but the test FPR was 5.16%, showing that the target does not necessarily generalize to unseen traffic.
+
+**Methodology note:** The baseline and threshold-tuned DoS-Wednesday results come from separate model experiments and should not be treated as a direct comparison of threshold changes alone. The held-out file was excluded from training and threshold selection for this experiment, although it had been evaluated separately in an earlier baseline experiment.
 
 ### Explainability
 
-SHAP is used to investigate global feature importance and individual
-predictions, helping analyze which features influence the model's
-decisions and where attacks may be missed.
+SHAP is used to investigate global feature importance and individual predictions. Global explanations summarize the influence of features across a sample, while local waterfall plots show how features contribute to a specific prediction.
+
+SHAP explanations describe model behavior; they do not establish causality or guarantee that a flow is malicious.

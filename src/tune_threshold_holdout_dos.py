@@ -226,7 +226,7 @@ def main():
     )
     print(f"Modèle sauvegardé : {bundle_path}")
 
-    print("\n=== 5. Évaluation finale sur DoS-Wednesday (jamais utilisé avant) ===")
+    print("\n=== 5. Évaluation sur DoS-Wednesday (exclu de l'entraînement et du choix du threshold) ===")
     holdout_df = load_sample(holdout_path)
     y_test = holdout_df.pop("__target__").astype("int8")
 
@@ -253,7 +253,7 @@ def main():
     print("\nRésultats test :")
     print(test_results.to_string(index=False))
     print(f"\nRapport test : {test_csv}")
-    print("\nTerminé. Le fichier DoS-Wednesday n'a servi ni à choisir le threshold ni à entraîner le modèle.")
+    print("\nTerminé. DoS-Wednesday a été exclu de l'entraînement et du choix du threshold pour cette expérience.")
 
 
 if __name__ == "__main__":
