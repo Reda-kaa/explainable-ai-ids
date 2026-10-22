@@ -132,3 +132,36 @@ SHAP provides global feature importance and local explanations to help understan
 
 ![SHAP Explainability](assets/shap-explanation.png)
 
+
+## Model Evaluation & Generalization
+
+The model was evaluated on a general evaluation set and on held-out
+network traffic files to assess its ability to generalize to unseen data.
+
+### General Evaluation
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 99.27% |
+| Attack F1-score | 98.91% |
+| ROC-AUC | 99.96% |
+
+Evaluation set: 12,115 samples.
+
+### Held-Out Dataset Evaluation
+
+| Test dataset | Accuracy | Attack Recall | Attack F1-score | ROC-AUC |
+|---|---:|---:|---:|---:|
+| DDoS-Friday | 81.22% | 62.66% | 77.00% | 89.98% |
+| DoS-Wednesday | 51.53% | 3.12% | Not reported | 97.19% |
+
+The held-out tests reveal a generalization gap, particularly for
+DoS-Wednesday. These results highlight the importance of evaluating
+intrusion detection models on unseen traffic and investigating
+decision thresholds, feature distributions, and missed attacks.
+
+### Explainability
+
+SHAP is used to investigate global feature importance and individual
+predictions, helping analyze which features influence the model's
+decisions and where attacks may be missed.
