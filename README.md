@@ -97,13 +97,14 @@ Datasets are excluded from version control by default.
 Use only datasets you are authorised to analyse. Check the dataset licence
 and remove sensitive information before publishing files or reports.
 
+**Model artifacts:** The Streamlit dashboard loads `models/random_forest_ids.joblib`. The threshold-tuned DoS-Wednesday experiment uses a separate model artifact and evaluation pipeline. The reported threshold-tuned metrics should not be assumed to describe the dashboard's default model unless that artifact is explicitly configured and evaluated in the application.
+
 ## Limitations
 
 - Predictions depend on the quality and distribution of the training data.
 - Performance may change on traffic from different environments.
 - Results should be validated before any operational security use.
-- The application is a research prototype, not a replacement for a
-  production security monitoring system.
+- The application is a research prototype, not a replacement for a production security monitoring system.
 
 ## Future Improvements
 
