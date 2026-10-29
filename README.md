@@ -113,10 +113,7 @@ and remove sensitive information before publishing files or reports.
 - More detailed evaluation reports
 - Deployment documentation and reproducible experiments
 
-## License
 
-No license has been specified yet. Add an appropriate license before
-allowing others to reuse or redistribute this project.
 
 
 ---
